@@ -1,0 +1,18 @@
+<form>
+	<div class = "scratch_Title">
+		<label>SCRATCH TITLE :</label>
+		<input type = "text" ng-model = "scratch.title"></input>
+	</div>
+
+	<div class = "scratch_Content">
+		<label>SCRATCH ABOUT :</label>
+		<textarea type = "text" ng-model = "scratch.content"></textarea>
+	</div>
+
+	<div class = "add_Button">
+		<button ng-click = "addScratch()" type = "submit">ADD</button>
+	</div>
+	<div class = "reminder_Button">
+		<a class = "btn btn-primary" ng-click = "reminder()">REMINDER</a>
+	</div>
+</form>
