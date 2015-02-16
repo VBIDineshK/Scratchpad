@@ -1,0 +1,27 @@
+<form>
+	<div class = "form-group">
+		<label for = "scratch_Title">SCRATCH TITLE</label>
+		<input type = "text" class = "form-control" placeholder = "Enter Scratch Title" ng-model = "scratch.title"></input>
+	</div>
+
+	<div class = "form-group">
+		<label for = "scratch_content">SCRATCH ABOUT</label>
+		<textarea type = "textarea" class = "form-control" placeholder = "Scratch About {{scratch.title}}" ng-model = "scratch.content"></textarea>
+	</div>
+
+	<table class = "table table-hover">
+		<tr>
+			<td>
+				<div class = "add_Button">
+					<button ng-click = "addScratch()" type = "submit" class = "btn btn-primary">ADD</button>
+				</div>
+			</td>
+			<td>
+				<div class = "reminder_Button">
+					<a class = "btn btn-success" ng-click = "emailScratch()">eMail Scratch</a>
+				</div>
+			</td>
+		</tr>
+	</table>
+
+</form>
