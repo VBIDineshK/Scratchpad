@@ -1,0 +1,15 @@
+{
+  "name": "sails-mandrill",
+  "homepage": "https://github.com/mikermcneil/sails-mandrill",
+  "version": "0.10.2",
+  "_release": "0.10.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.10.2",
+    "commit": "036b823bf364d6f949535d3879d53a6c659ddd77"
+  },
+  "_source": "git://github.com/mikermcneil/sails-mandrill.git",
+  "_target": "~0.10.2",
+  "_originalSource": "mikermcneil/sails-mandrill",
+  "_direct": true
+}
