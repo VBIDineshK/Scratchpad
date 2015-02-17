@@ -59,7 +59,7 @@ module.exports.connections = {
   Mongodb: {
     adapter: 'sails-mongo',
     host: 'localhost',
-    port: 12345,
+    port: 27017,
     user: '',
     password: '',
     database: 'scratchpaddb'

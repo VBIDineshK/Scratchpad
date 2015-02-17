@@ -1,0 +1,15 @@
+.row {
+	position:static;
+}
+
+.hover-btn {
+	position:static;
+	display: none;
+}
+.row:hover .hover-btn {
+	display: block;
+}
+
+.title {
+	text-align: center;
+}

@@ -1,0 +1,22 @@
+<button type = "button" class = "btn-primary btn-lg nodecoration" ui-sref = "addNewScratch">
+	<span class = "glyphicon glyphicon-plus">SCRATCH</span>
+</button> 
+<div class = "alert alert-danger" role = "alert">
+	<span class = "glyphicon glyphicon-bullhorn"></span>
+	REMEMBER ::::::::
+	<marquee>{{scratch.scratch_reminder}}</marquee>
+</div>
+<table>
+	<tr>
+		<td><h1>All Notes</h1></td>
+	</tr>
+
+	<tr ng-repeat="scratch in scratchpad">
+		<td>{{scratch.title}}</td>
+		<td>
+			<a class = "btn btn-primary" ui-sref = "viewScratch({id:scratch.id})">View Scratch</a>
+			<a class = "btn btn-danger" ng-click = "deleteScratch(scratch)">Delete Scratch</a>
+		</td>
+		<td>{{scratch.time}}</td>
+	</tr>
+</table>

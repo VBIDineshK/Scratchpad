@@ -19,7 +19,7 @@ scratchpadModule.config(function($stateProvider,$httpProvider) {
 	});
 }).run(function($state){
 	$state.go('scratchpad');
-})
+});
 
 
 
@@ -73,4 +73,4 @@ scratchpadModule.factory('Notes', function($resource){
 			method:'PUT'
 		}
 	});
-});s
+});

@@ -1,33 +1,36 @@
+<!--Homepage of the Scratchpad. This view in included in the layout.-->
 <button type = "button" class = "btn btn-primary" ui-sref = "addNewScratch">
-	<span class = "glyphicon glyphicon-plus">SCRATCH</span>
+	<span class = "glyphicon glyphicon-plus"> SCRATCH</span>
 </button> 
-<button type = "button" class = "btn btn-danger" ui-sref = "addNewReminder">
-	<span class = "glyphicon glyphicon-plus">REMINDER</span>
-</button> 
+
 
 <div class = "container">
-	<div class = "border">
-		<div class = "col-border col-lg-3" ui-view></div>
-	</div>
-
-	<div class = "border">
-		<div class = "col-border col-lg-9">
-			<table class = "table table-hover">
-				<tr>
-					<td><h1>All Notes</h1></td>
-				</tr>
-
-				<tr ng-repeat="scratch in scratchpad">
-					<td>{{scratch.title}}</td>
-					<td>
-						<a class = "btn btn-primary" ui-sref = "scratchpad.viewScratch({id:scratch.id})">View Scratch</a>
-						<a class = "btn btn-danger" ng-click = "deleteScratch(scratch)">Delete Scratch</a>
-					</td>
-					<td>{{scratch.time}}</td>
-				</tr>
-			</table>
+	<div class = "col-md-4">
+		<div class = "border"> 
+			<div ui-view></div>
 		</div>
 	</div>
 
-	
+	<div class = "col-md-8">
+		<div class = "border">
+			<button type = "button" class = "btn btn-danger" ng-click = "emptyScratchpad(scratchpad)" style = "float:right">
+				<span class = "glyphicon glyphicon-trash"> Empty </span>
+				</button> 
+			<div class = "title">
+				<h1>All Notes</h1>
+				<span class = "glyphicon glyphicon-list-alt"></span>
+			</div>
+			
+			<table class = "table table-hover">
+				<tr ng-repeat="scratch in scratchpad">
+					<td><h2>{{scratch.title}}</h2></td>
+					<td>{{scratch.time}}</td>
+					<td>
+						<a class = "btn btn-primary" ui-sref = "scratchpad.viewScratch({id:scratch.id})">View Scratch</a>
+						<a class = "btn btn-danger" ng-click = "deleteScratch(scratch,0)">Delete Scratch</a>
+					</td>	
+				</tr>
+			</table>
+		</div>
+	</div>	
 </div>

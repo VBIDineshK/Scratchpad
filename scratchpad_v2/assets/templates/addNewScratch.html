@@ -1,4 +1,4 @@
-<form>
+<!--Form for the addition of a scratch, Requires: Title, Content. Optional Email option available-->
 	<div class = "form-group">
 		<label for = "scratch_Title">SCRATCH TITLE</label>
 		<input type = "text" class = "form-control" placeholder = "Enter Scratch Title" ng-model = "scratch.title"></input>
@@ -9,19 +9,19 @@
 		<textarea type = "textarea" class = "form-control" placeholder = "Scratch About {{scratch.title}}" ng-model = "scratch.content"></textarea>
 	</div>
 
-	<table class = "table table-hover">
-		<tr>
-			<td>
-				<div class = "add_Button">
-					<button ng-click = "addScratch()" type = "submit" class = "btn btn-primary">ADD</button>
-				</div>
-			</td>
-			<td>
-				<div class = "reminder_Button">
-					<a class = "btn btn-success" ng-click = "emailScratch()">eMail Scratch</a>
-				</div>
-			</td>
-		</tr>
-	</table>
 
-</form>
+	<div class = "form-group">
+		<button ng-click = "addScratch()" type = "submit" class = "btn btn-primary">ADD</button>
+	</div>
+
+
+	<div class = "form-group">
+		<label for = "reminder_Time">Email this scratch (Optional)</label>
+		<input type = "text" class = "form-control" placeholder = "Enter email address (Optional)" ng-model = "scratch.mailid"></input>
+	</div>
+
+	<div class = "form-group">
+		<a class = "btn btn-success" ng-click="emailScratch()">eMail Scratch</a>
+	</div>
+
+

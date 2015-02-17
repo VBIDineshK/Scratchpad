@@ -15,8 +15,8 @@
 // (if you're using LESS with the built-in default config, you'll want
 //  to change `assets/styles/importer.less` instead.)
 var cssFilesToInject = [
-  'styles/bootstrap.min.css',
-  'styles/border.css'
+  'styles/border.css',    //Styling the table border
+  'styles/tablerow.css'   //Styling the table rows and header
 ];
 
 
@@ -28,12 +28,12 @@ var jsFilesToInject = [
   'js/dependencies/sails.io.js',
 
   // Dependencies like jQuery, or Angular are brought in here
-  'js/dependencies/bower_components/jquery/dist/jquery.min.js',
-  'js/dependencies/bower_components/angular/angular.min.js',
-  'js/dependencies/bower_components/angular-resource/angular-resource.min.js',
-  'js/dependencies/bower_components/angular-ui-router/release/angular-ui-router.min.js',
-  'js/dependencies/bower_components/moment/moment.js',
-  'js/dependencies/bower_components/sails-mandrill/index.js',
+  'js/dependencies/bower_components/jquery/dist/jquery.min.js',//jQuery-Bower
+  'js/dependencies/bower_components/angular/angular.min.js', //AngularJS-Bower
+  'js/dependencies/bower_components/angular-resource/angular-resource.min.js',//Angular-Resource-Bower-github
+  'js/dependencies/bower_components/angular-ui-router/release/angular-ui-router.min.js',//Angular-Router-Bower-github
+  'js/dependencies/bower_components/moment/moment.js',//MomentJS-Bower
+  
 
 
   // All of the rest of your client-side js files
